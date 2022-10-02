@@ -27,6 +27,7 @@ for predmet, hodnoceni in school_report.items():
         print(predmet)
 
 
+
 # 2 Čtenářský deník
 # Gustav je vášnivým čtenářem detektivek z našeho nakladatelství a navíc si zapisuje knihy, které přečetl. Níže ve slovníku vidíme, jaké informace si eviduje - název knihy, počet stran a hodnocení od 0 do 10.
 # Napiš program, který spočte celkový počet stran, které Gustav přečetl.
