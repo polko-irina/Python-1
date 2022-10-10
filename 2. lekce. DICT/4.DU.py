@@ -11,9 +11,6 @@
 # Vytvoř program, který se uživatele zeptá na region, který ho zajímá. Následně projdi seznam a vypiš všechny státy, které leží v regionu. Pokud program žádný stát pro daný region nenajde, vypiš text `"Neznámý region"`.
 
 
-from unicodedata import name
-
-
 staty = [
     {'name': 'Afghanistan', 'capital': 'Kabul', 'region': 'Asia', 'subregion': 'Southern Asia', 'population': 27657145,
      'area': 652230.0, 'gini': 27.8},
