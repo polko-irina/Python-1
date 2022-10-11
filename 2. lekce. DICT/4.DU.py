@@ -11,6 +11,9 @@
 # Vytvoř program, který se uživatele zeptá na region, který ho zajímá. Následně projdi seznam a vypiš všechny státy, které leží v regionu. Pokud program žádný stát pro daný region nenajde, vypiš text `"Neznámý region"`.
 
 
+from multiprocessing.resource_sharer import stop
+
+
 staty = [
     {'name': 'Afghanistan', 'capital': 'Kabul', 'region': 'Asia', 'subregion': 'Southern Asia', 'population': 27657145,
      'area': 652230.0, 'gini': 27.8},
@@ -503,21 +506,11 @@ staty = [
      'area': 390757.0}]
 
 
-# Varianta A
-a = input("Jaky region tě zajima? ")
-for stat in staty:
-    if stat['region'] == a:
-         print(stat['name'])
-else:
-    print("Neznámý region")
-
-
-# Varianta B
 a = input("Jaky region tě zajima? ")
 b = []
 for item in staty:
     b.append(item['region'])
     if item['region'] == a:
         print(item['name'])
-else:
-    print('Neznamy region')
+    if a not in b:
+        print('Neznamy region')
