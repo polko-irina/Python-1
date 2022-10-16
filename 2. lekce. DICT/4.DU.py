@@ -512,5 +512,5 @@ for item in staty:
     b.append(item['region'])
     if item['region'] == a:
         print(item['name'])
-    if a not in b:
+if a not in b:
         print('Neznamy region')
