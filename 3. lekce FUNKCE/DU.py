@@ -8,11 +8,10 @@ def delka_cisla(sms):
 
 print(delka_cisla(str(123456789)))
 
-
 # def cena_zpravy(cena, znaky):
 #    cena = 3
-#    znaky = 180
-#    zapocete180 = 180 * 3
+#    zapocete_znaky = 180 * cena
 #    if znaky >= 180
-#       return 180 * 3
-###    cena_zpravy ()
+#       return zapocete_znaky
+#
+# cena_zpravy (3, 250)
