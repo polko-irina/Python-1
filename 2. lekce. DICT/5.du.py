@@ -8,7 +8,7 @@
 # rozloha (`area`),
 # Giniho koeficient (`gini`).
 
-# Vytvoř program, který se uživatele zeptá na region, který ho zajímá. Následně projdi seznam a vypiš všechny státy, které leží v regionu. Pokud program žádný stát pro daný region nenajde, vypiš text `"Neznámý region"`.
+# Vytvoř program, který se uživatele zeptá na region, který ho zajímá. Následně sestav slovník, který bude obsahovat celkové počty obyvatel pro jednotlivé subregiony v daném regionu. Například pokud uživatel zadá Europe, tak by měl být výsledek následující:
 
 staty = [
     {'name': 'Afghanistan', 'capital': 'Kabul', 'region': 'Asia', 'subregion': 'Southern Asia', 'population': 27657145,
@@ -501,18 +501,15 @@ staty = [
     {'name': 'Zimbabwe', 'capital': 'Harare', 'region': 'Africa', 'subregion': 'Eastern Africa', 'population': 14240168,
      'area': 390757.0}]
 
-region1 = input("Please write the region: ")
 
-population_list = {}
+a = input ('Jaky region vas zajima? ')
 
-for item in staty:
-    subregion = item["subregion"]
-    region = item["region"]
-    population = item["population"]
-    if region == region1:
-        if subregion in population_list :
-            population_list[subregion] += population
+dict = {}
+
+for stat in staty:
+    if stat ['region'] == a:
+        if stat['subregion'] in dict:
+            dict[stat['subregion']] += stat['population']
         else:
-            population_list[subregion] = population
-            
-print (population_list)
+            dict[stat['subregion']] = stat['population']
+print(dict)
