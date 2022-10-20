@@ -1,17 +1,26 @@
 
 def delka_cisla(sms):
-    sms = str(sms)
-    if int(sms[0:9]) :
-        return(int(sms))
+    sms = sms.replace(" ", "")
+    if len(sms) == 9:
+        return True
     else:
-        return('neplatne cislo')
+        return(False)
 
-print(delka_cisla(str(123456789)))
+# print(delka_cisla('12 34 56 7 8 9'))
 
-# def cena_zpravy(cena, znaky):
-#    cena = 3
-#    zapocete_znaky = 180 * cena
-#    if znaky >= 180
-#       return zapocete_znaky
-#
-# cena_zpravy (3, 250)
+def cena_zpravy(massage):
+    cena = 3
+    a = 1
+    b = int((len(massage) / 180))
+    a += b
+    cena_celkem = a * cena
+    return cena_celkem 
+
+# print(len('qwertzuiopúúúúůlkjhgfdsxcvbnm,.lkjhgfdswertzuiopú§ů.qwertzuiopúúúúůlkjhgfdsxcvbnm,.lkjhgfdswertzuiopú§ů.,qwertzuiopúúúúůlkjhgfdsxcvbnm,.lkjhgfdswertzuiopú§ů.qwertzuiopúúúúůlkjhgfdsxcvbnm,.lkjhgfdswertzuiopú§ů.qwertzuiopúúúúůlkjhgfdsxcvbnm,.lkjhgfdswertzuiopú§ů.qwertzuiopúúúúůlkjhgfdsxcvbnm,.lkjhgfdswertzuiopú§ů.,qwertzuiopúúúúůlkjhgfdsxcvbnm,.lkjhgfdswertzuiopú§ů.qwertzuiopúúúúůlkjhgfdsxcvbnm,.lkjhgfdswertzuiopú§ů.'))
+
+cislo = input('Zadej cislo: ')
+if delka_cisla(cislo):
+    zprava = input('Zadej zpravu: ')
+    print(f'Zprava bude stat {cena_zpravy(zprava)} Kc.')
+else:
+    print('Nespravne cislo.')
