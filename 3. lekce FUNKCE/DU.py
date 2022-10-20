@@ -4,7 +4,7 @@ def delka_cisla(sms):
     if len(sms) == 9:
         return True
     else:
-        return(False)
+        return False
 
 # print(delka_cisla('12 34 56 7 8 9'))
 
