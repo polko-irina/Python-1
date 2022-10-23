@@ -1,15 +1,14 @@
-class Jednorožec:
-    def vypis_informace(self):
-        return f'Jmenuji se {self.jmeno} a mam {self.barva} barvu.'
+class Zamestnanec:
+    def __init__(self, jmeno, pozice, zkusebni_doba):
+        self.jmeno = jmeno
+        self.pozice = pozice
+        self.zkusebni_doba = zkusebni_doba
 
+    def __str__(self):
+        vypis = f"{self.jmeno} pracuje na pozici {self.pozice}."
+        if self.zkusebni_doba:
+            return vypis + ' Je ve zkušební době.'
+        return vypis + ' Neni ve zkušební době.'
 
-karel = Jednorožec()
-karel.jmeno = 'Karel'
-karel.barva = 'duhovou'
-
-lenka = Jednorožec()
-lenka.jmeno = 'Lenka'
-lenka.barva = 'pruhovanou'
-
-print(karel.vypis_informace())
-print(lenka.vypis_informace())
+frantisek = Zamestnanec("František Novák", "konstruktér", False)
+print(frantisek)
