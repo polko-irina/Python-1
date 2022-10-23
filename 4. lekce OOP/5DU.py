@@ -33,7 +33,7 @@ class Kucharka:
         self.recepty = []
 
     def __str__(self):
-        return (f'{self.nazev} od {self.autor} {self.recepty.count(Recept)} receptu.')
+        return (f'{self.nazev} od {self.autor} ma {self.recepty.count(Recept)} receptu.')
 
     def pocet_receptu(self):
         for i in self.recepty:
