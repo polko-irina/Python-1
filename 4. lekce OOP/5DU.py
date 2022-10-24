@@ -29,13 +29,12 @@ print(tiramisu)
 babovka = Recept('Babovku', 'lehký', 'www.babovka.com')
 print(babovka)
 
+
 class Kucharka:
     def __init__(self, nazev, autor):
         self.nazev = nazev
         self.autor = autor
         self.recepty = []
-        self.vyzkouseno = False
-
 
     def __str__(self):
         return (f'{self.nazev} od {self.autor} ma {len(self.recepty)} receptu.')
