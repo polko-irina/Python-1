@@ -52,7 +52,7 @@ class Kucharka:
         for a in self.recepty:
             for self.nazev, self.narocnost, self.url_adresa, self.vyzkouseno in a:
                 if self.vyzkouseno:
-                    vyzkousene_recepty.append(a)
+                    vyzkousene_recepty.append()
                 return vyzkousene_recepty
     
 dezerty = Kucharka('Dezerty', 'Iryny')
