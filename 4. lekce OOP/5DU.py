@@ -6,7 +6,7 @@ class Recept:
         self.url_adresa = url_adresa
         self.vyzkouseno = False
 
-    def __str__(self):
+    def __repr__(self):
         vypis = (f'Recept pro {self.nazev} najdete na strance {self.url_adresa}, postup je {self.narocnost} ')
         if self.vyzkouseno:
             return vypis + 'a již byl vyzkoušen.'
@@ -24,6 +24,7 @@ muffiny.zkusit()
 print(muffiny)
 
 tiramisu = Recept('Tiramisu', 'mirně složity', 'www.tiramisu.com')
+tiramisu.zkusit()
 print(tiramisu)
 
 babovka = Recept('Babovku', 'lehký', 'www.babovka.com')
@@ -37,7 +38,7 @@ class Kucharka:
         self.recepty = []
 
     def __str__(self):
-        return (f'{self.nazev} od {self.autor} ma {len(self.recepty)} receptu.')
+        return (f'Kniha {self.nazev} od {self.autor} ma {len(self.recepty)} recepty.')
 
     def pocet_receptu(self):
         return len(self.recepty)
@@ -45,26 +46,27 @@ class Kucharka:
     def pridej_recept(self, novy_recept):
         self.recepty.append(novy_recept)
         
+        # BONUS # 
     def vyzkousene_recepty(self):
         vyzkousene_recepty = []
-        # if 
-        #vyzkousene_recepty.append()
-        return vyzkousene_recepty
-        
+        for a in self.recepty:
+            for self.nazev, self.narocnost, self.url_adresa, self.vyzkouseno in a:
+                if self.vyzkouseno:
+                    vyzkousene_recepty.append(a)
+                return vyzkousene_recepty
+    
 dezerty = Kucharka('Dezerty', 'Iryny')
 print(dezerty)
 dezerty.pridej_recept(muffiny)
 dezerty.pridej_recept(tiramisu)
 dezerty.pridej_recept(babovka)
-print(dezerty.pocet_receptu())
 
 pernik = Recept('Pernik', 'hodně slozity', 'www.pernik.com')
 dezerty.pridej_recept(pernik)
 print(dezerty.pocet_receptu())
+print(dezerty)
 
-# Bonus 
-print(dezerty.vyzkousene_recepty())
+ # BONUS X
 pernik.zkusit()
-print(pernik)
 print(dezerty.vyzkousene_recepty())
 
