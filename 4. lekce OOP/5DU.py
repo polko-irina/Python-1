@@ -24,7 +24,6 @@ muffiny.zkusit()
 print(muffiny)
 
 tiramisu = Recept('Tiramisu', 'mirně složity', 'www.tiramisu.com')
-tiramisu.zkusit()
 print(tiramisu)
 
 babovka = Recept('Babovku', 'lehký', 'www.babovka.com')
@@ -50,10 +49,9 @@ class Kucharka:
     def vyzkousene_recepty(self):
         vyzkousene_recepty = []
         for a in self.recepty:
-            for self.nazev, self.narocnost, self.url_adresa, self.vyzkouseno in a:
-                if self.vyzkouseno:
-                    vyzkousene_recepty.append()
-                return vyzkousene_recepty
+            if a.vyzkouseno:
+                vyzkousene_recepty.append(a)
+        return vyzkousene_recepty
     
 dezerty = Kucharka('Dezerty', 'Iryny')
 print(dezerty)
