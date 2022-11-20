@@ -61,4 +61,6 @@ print(temperature[temperature["Day"] == 13])
 
 print(temperature.loc['US'])
 
-# print(temperature[(temperature.loc['US']) & (temperature["Day"] == 13)]) - nevypiše nic 
+# print((temperature.loc['US']) & (temperature[temperature["Day"] == 13])) 
+
+# print(temperature[(temperature.loc['US']) & (temperature["Day"] == 13)])
