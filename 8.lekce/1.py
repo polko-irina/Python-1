@@ -41,4 +41,4 @@ print(nakupy.iloc[:,2:3])
 
 print(nakupy.iloc[:5,[0,3]]) # vybere pouze sloupec 0 a 3
 
-print(nakupy.iloc[:5,0:3]) # vybere všechni sloupce od 0 do 3
+print(nakupy.iloc[:5,0:3]) # vybere všichni sloupce od 0 do 2
