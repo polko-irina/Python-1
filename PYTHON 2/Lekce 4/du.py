@@ -10,6 +10,6 @@ data["Rank"] = data.groupby(["year"])["candidatevotes"].rank(ascending=False)
 data = data.sort_values(["candidatevotes", "state", "year"], ascending=[False, False, True])
 # print(data.head(30))
  
-viteze = data.sort_values([""])
+viteze = data.sort_values(["candidatevotes"])
 print(viteze)
 
