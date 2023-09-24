@@ -12,7 +12,7 @@ class Nemoc:
         self.pocet_obeti = pocet_obeti
 
 class Koronavirus(Nemoc):
-    def __init__(self, jmeno, inkubacni_doba, pocet_obeti, sireni, ):
+    def __init__(self, jmeno, inkubacni_doba, pocet_obeti, sireni):
         super().__init__(jmeno, inkubacni_doba, pocet_obeti, sireni)
         self.varianty = []
     

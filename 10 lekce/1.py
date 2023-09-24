@@ -35,6 +35,7 @@ print(u202)
 maturita = pandas.concat([u202, u203, u302], ignore_index=True)
 
 print(maturita)
+# print(u202)
 
 u202['mistnost'] = 'u202' # pridat sloupec mistnost s hodnotou u202
 u203['mistnost'] = 'u203'

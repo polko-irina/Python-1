@@ -57,4 +57,3 @@ print(staty[(staty["population"] > 10_000_000_000) | (staty["area"] > 3_000_000)
 print(staty[staty["subregion"].isin(["Western Europe", "Eastern Europe"])])
 
 print(staty[~staty["subregion"].isin(["Western Europe", "Eastern Europe"])])
-
