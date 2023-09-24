@@ -9,11 +9,9 @@ print(studenti2)
 st = pandas.concat([studenti1, studenti2], ignore_index=True)
 print(st)
 
-prezencni_st = st.groupby('obor')["jméno"].count()
-print(prezencni_st)
+print(st.groupby('obor')["jméno"].count())
 
-prezencni_st = st.groupby('obor')["prospěch"].mean()
-print(prezencni_st)
+print(st.groupby('obor')["prospěch"].mean())
 
 jmena = pandas.read_csv('jmena.csv')
 print(jmena)
