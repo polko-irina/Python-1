@@ -1,12 +1,12 @@
 import requests
 
-url = "https://kodim.cz/cms/assets/kurzy/python-data-1/python-pro-data-1/zakladni-dotazy/staty.json"
+""" url = "https://kodim.cz/cms/assets/kurzy/python-data-1/python-pro-data-1/zakladni-dotazy/staty.json"
 r = requests.get(url) # <Response [200]>
-open("staty.json", "wb").write(r.content)
+open("staty.json", "wb").write(r.content)"""
 
 import pandas
 
-staty = pandas.read_json("staty.json")
+staty = pandas.read_json("9. lekce/staty.json")
 print(staty)
 
 print(staty.head())

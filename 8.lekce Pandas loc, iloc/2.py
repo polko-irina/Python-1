@@ -1,6 +1,6 @@
 import pandas
 
-jobs = pandas.read_csv("DataAnalyst.csv")
+jobs = pandas.read_csv("8.lekce Pandas loc, iloc/DataAnalyst.csv")
 
 print(jobs.columns)
 print(jobs.iloc[9])

@@ -6,14 +6,14 @@ file_names = ["u202.csv", "u203.csv", "u302.csv", "studenti.csv", "predsedajici.
     url = "https://kodim.cz/cms/assets/kurzy/python-data-1/python-pro-data-1/agregace-a-spojovani/{}".format( file )
     r = requests.get(url)
     open(file, "wb").write(r.content)
-    print(f"File {file} downloaded.") """
+    print(f"File {file} downloaded.")"""
 
 
 import pandas
 
-u202 = pandas.read_csv("u202.csv")
-u203 = pandas.read_csv("u203.csv")
-u302 = pandas.read_csv("u302.csv")
+u202 = pandas.read_csv("10 lekce/u202.csv")
+u203 = pandas.read_csv("10 lekce/u203.csv")
+u302 = pandas.read_csv("10 lekce/u302.csv")
 
 print(u202)
 
@@ -26,9 +26,9 @@ print(testovaci_data)
 print(testovaci_data.dropna(axis=1)) # odstranuje sloupce s hodnotou Nan(axis´ma pouze hodnotu 0 nebo 1. Defoltně je 0)
 print(testovaci_data.fillna('Hodnota chybí')) # nahrazuje hodnoty
 
-u202 = pandas.read_csv('u202.csv').dropna()
-u203 = pandas.read_csv('u203.csv').dropna()
-u302 = pandas.read_csv('u302.csv').dropna()
+u202 = pandas.read_csv('10 lekce/u202.csv').dropna()
+u203 = pandas.read_csv('10 lekce/u203.csv').dropna()
+u302 = pandas.read_csv('10 lekce/u302.csv').dropna()
 
 print(u202)
 
@@ -44,16 +44,16 @@ u302['mistnost'] = 'u302'
 maturita = pandas.concat([u202, u203, u302], ignore_index=True)
 print(maturita)
 
-maturita.to_csv('maturita.csv', index=False)
+maturita.to_csv('10 lekce/maturita.csv', index=False)
 
-studenti = pandas.read_csv('studenti.csv')
+studenti = pandas.read_csv('10 lekce/studenti.csv')
 print(studenti)
 
 propojeny_df = pandas.merge(u202, studenti) # spojování tabulek
 print(propojeny_df)
 print(propojeny_df.shape)
 
-preds = pandas.read_csv('predsedajici.csv')
+preds = pandas.read_csv('10 lekce/predsedajici.csv')
 
 novy_propojeny_df = pandas.merge(propojeny_df, preds, on=['den'], how="left")
 print(novy_propojeny_df)

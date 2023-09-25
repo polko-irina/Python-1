@@ -15,7 +15,7 @@ Rozsahy fungují podobně jako u číselných indexů. Vyhledej záznamy mezi "�
 
 import pandas
 
-zoo = pandas.read_csv('adopce-zvirat.csv', sep = ";")
+zoo = pandas.read_csv('8.lekce Pandas loc, iloc/adopce-zvirat.csv', sep = ";")
 print(zoo)
 print(zoo.shape)
 # Tabulka má 513 řádků x 6 sloupců

@@ -27,7 +27,7 @@ Pro data z předchozího dotazu napiš dotaz na řádky ve městech (sloupec Cit
 
 import pandas
 
-temperature = pandas.read_csv("temperature.csv", sep=",")
+temperature = pandas.read_csv("9. lekce/temperature.csv", sep=",")
 print(temperature)
 
 temperature = temperature.set_index("Country")

@@ -7,7 +7,7 @@ print(pandas.__version__)
 
 prvni_dataframe = pandas.DataFrame(columns = ["sloupec1", "sloupec2"])
 
-nakupy = pandas.read_csv('nakupy.csv')
+nakupy = pandas.read_csv("8.lekce Pandas loc, iloc/nakupy.csv")
 print(nakupy)
 
 nakupy.info()

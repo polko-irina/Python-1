@@ -2,17 +2,17 @@
 import pandas
 import matplotlib.pyplot as plt
 
-ucet = pandas.read_csv("ucet.csv", names=['datum', 'pohyb'], index_col='datum')
-print(ucet)
+ucet = pandas.read_csv("12 lekce/ucet.csv")
+#print(ucet)
 
-# ucet.plot()
-# plt.show()
+#ucet.plot()
+#plt.show()
 
-# ucet.cumsum().plot() # kumulativní suma
-# plt.show()
+#ucet.cumsum().plot() # kumulativní suma
+#plt.show()
 
-# ucet.plot(kind='bar', color='yellow', grid=True)
-# plt.show()
+#ucet.plot(kind='bar', color='yellow', grid=True )
+#plt.show()
 
 """ Barvy
 https://matplotlib.org/stable/tutorials/colors/colors.html
@@ -25,26 +25,25 @@ color = "b" # blue, k = black
 color= "C4" # Cn notation
 color = "xkcd:crimson """
 
-# color = "0"
-""" color = ["red" if value < 0 else "green" for value in ucet["pohyb"]]
+
+color = ["red" if value < 0 else "green" for value in ucet["pohyb"]]
 ucet["pohyb"].plot(kind = 'bar',
         color = color, 
         width = 0.5,
+        grid=True,
 
         ## Popisky
         ylabel = "Částka v Kč",
         xlabel = "Datum transakce",
         title = "Transakce na účtě"
         )
+plt.show()
 
-plt.show() """
 
-""" color = ["#EB5160" if value < 0 else "#91C499" for value in ucet["pohyb"]]
-
+color = ["#EB5160" if value < 0 else "#91C499" for value in ucet["pohyb"]]
 fig, ax = plt.subplots(figsize=(15,7))
 print(type(fig))
 print(type(ax))
-
 
 ax.set_title("Pohyby na účtu", fontweight="bold", fontsize = 24)
 ax.tick_params(axis="x", labelrotation=45)
@@ -62,24 +61,23 @@ for i in range(len(ucet.pohyb)):
 
 ax.spines['right'].set_visible(False) # oramovani
 ax.spines['left'].set_visible(False) # oramovani
-
-# plt.show()
+plt.show()
 
 # Style sheets
 
 # https://matplotlib.org/stable/gallery/style_sheets/index.html
 # https://towardsdatascience.com/how-to-create-and-use-custom-matplotlib-style-sheet-9393f498063
 
-# plt.rcParams['figure.figsize'] = [15, 5]
-# plt.style.use(['dark_background']) # default, grayscale""" 
+"""plt.rcParams['figure.figsize'] = [15, 5]
+plt.style.use(['dark_background']) # default, grayscale
 
-# with plt.xkcd():
-#     ucet.plot(
-#         color="blue"
-#      )
-# plt.show()
+with plt.xkcd():
+    ucet.plot(
+        color="blue"
+      )
+plt.show()"""
 
-# https://www.data-to-viz.com
+# https://www.data-to-viz.com 
 
 muzi = pandas.Series([
     179.3, 183.7, 181.4, 176.0, 183.6, 184.7, 163.4, 180.3,
@@ -102,7 +100,7 @@ muzi = pandas.Series([
 # plt.show()
 
 muzi.plot(kind='box', whis=[0, 100])
-plt.show()
+#plt.show()
 
 zeny = pandas.Series([
     172.0, 169.0, 166.8, 164.6, 172.7, 171.5, 167.0, 167.0,
@@ -118,4 +116,4 @@ zeny = pandas.Series([
 vysky = muzi.to_frame(name='muži')
 vysky['ženy'] = zeny
 vysky.plot(kind='box', whis=[0, 100])
-plt.show()
+#plt.show()

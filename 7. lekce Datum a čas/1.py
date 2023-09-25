@@ -1,5 +1,5 @@
 try:
-    import jupyter
+    import matplotlib
 
     print("module is installed")
 except ModuleNotFoundError:

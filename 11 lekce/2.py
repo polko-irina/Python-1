@@ -60,6 +60,5 @@ print(anonymni_zapis)
 anonymni_zapis = regex_rodne_cislo.sub("X", zapis)
 
 
-Cvičení
 
 

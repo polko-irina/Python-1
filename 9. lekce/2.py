@@ -1,7 +1,7 @@
 
 import pandas
 
-jmena = pandas.read_csv('jmena.csv')
+jmena = pandas.read_csv('9. lekce/jmena.csv')
 print(jmena)
 
 jmena = jmena.set_index("jméno")

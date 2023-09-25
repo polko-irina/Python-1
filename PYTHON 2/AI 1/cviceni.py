@@ -5,7 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 from sklearn.metrics import ConfusionMatrixDisplay, precision_score, accuracy_score
 
-data = pandas.read_csv("nba_logreg.csv")
+data = pandas.read_csv("PYTHON 2/AI 1/nba_logreg.csv")
 # print(data.head())
 
 X = data.drop(columns="TARGET_5Yrs")

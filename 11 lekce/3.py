@@ -1,6 +1,6 @@
 import pandas
 
-df = pandas.read_csv("zpravy.csv", sep=";")
+df = pandas.read_csv("11 lekce/zpravy.csv", sep=";")
 print(df)
 
 df["obsahuje_rodne_cislo"] = df["zapis"].str.contains(r"\d{9,10}")
