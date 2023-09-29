@@ -2,7 +2,7 @@
 import pandas
 import matplotlib.pyplot as plt
 
-ucet = pandas.read_csv("ucet.csv")
+ucet = pandas.read_csv("12 lekce/ucet.csv")
 #print(ucet)
 
 #ucet.plot()
